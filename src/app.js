@@ -18,12 +18,9 @@ app.use(express.json());
 // Routes
 app.use('/api/users', userRoutes);
 
-//testing purpose
-//'*/1 * * * *'
-//0 */3 * * *
 
 // Schedule weather updates every 3 hours
-cron.schedule('*/1 * * * *', async () => {
+cron.schedule(0 */3 * * *', async () => {
     try {
         console.log('Starting weather update job...');
         const users = await User.find({});
