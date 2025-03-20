@@ -2,6 +2,12 @@
 
 A Node.js API that stores users' emails and locations, and automatically sends weather reports every 3 hours.
 
+[Demo Video](https://github.com/user-attachments/assets/d2892f88-3197-47ca-ac3c-f2ff053a44c9)
+
+
+
+
+
 ## Features
 
 - User registration with email and location
