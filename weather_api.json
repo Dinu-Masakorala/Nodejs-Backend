@@ -1,0 +1,59 @@
+{
+    "info": {
+        "name": "Weather API Collection",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Create User",
+            "request": {
+                "method": "POST",
+                "header": [
+                    { "key": "Content-Type", "value": "application/json" }
+                ],
+                "url": {
+                    "raw": "{{baseUrl}}/api/users",
+                    "host": ["{{baseUrl}}"],
+                    "path": ["api", "users"]
+                },
+                "body": {
+                    "mode": "raw",
+                    "raw": "{ \"email\": \"test@example.com\", \"latitude\": 37.7749, \"longitude\": -122.4194 }"
+                }
+            }
+        },
+        {
+            "name": "Update User Location",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    { "key": "Content-Type", "value": "application/json" }
+                ],
+                "url": {
+                    "raw": "{{baseUrl}}/api/users/test@example.com/location",
+                    "host": ["{{baseUrl}}"],
+                    "path": ["api", "users", "test@example.com", "location"]
+                },
+                "body": {
+                    "mode": "raw",
+                    "raw": "{ \"latitude\": 40.7128, \"longitude\": -74.0060 }"
+                }
+            }
+        },
+        {
+            "name": "Get User Weather Data",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{baseUrl}}/api/users/test@example.com/weather?date=2025-03-20",
+                    "host": ["{{baseUrl}}"],
+                    "path": ["api", "users", "test@example.com", "weather"],
+                    "query": [
+                        { "key": "date", "value": "2025-03-20" }
+                    ]
+                }
+            }
+        }
+    ]
+}
